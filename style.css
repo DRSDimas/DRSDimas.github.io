@@ -111,7 +111,7 @@ nav .navlinks li a{
     height: 300px;
     border-radius: 50%;
     overflow: hidden;
-    border: 15px solid #444;
+    border: 15px solid #16d387;;
     box-shadow: 5px 7px 25px rgba(0,0,0,0.5);
 }
 .hero-pic img{
@@ -153,7 +153,7 @@ nav .navlinks li a{
     margin: 5px 0px;
     margin-right:7px;
     border-radius: 30px;
-    border:2px solid #16d387;
+    border:2px solid #e5e5e5;
     box-shadow:  0 10px 10px -8px rgb(0 0 0 / 78%);
 }
 .btn.active{
