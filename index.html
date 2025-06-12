@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🛰️DRSDimas</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
@@ -29,26 +33,28 @@
                  </nav>
              </header>
              <div class="container">
-                  <div class="hero-pic">
+                 <div class="hero-pic">
                      <img src="DRSD Logo Extended.png" alt="profile pic">
-                  </div>
-                  <div class="hero-text">
-                      <h5>Hello I'm <span class="input"></span></h5>
-                      <h1>DRSDimas</h1>
-                      <p> Did you ever hear the tragedy of seeing the unseen with 🛰️? I thought not.
-                      </p>
+                 </div>
+                 <div class="hero-text">
+                     <h5>Bienvenue🌏🛰️</h5>
+                     <h1>DRSDimas</h1>
+                     <div class="typed-lines">
+                         <span class="input1"></span><br>
+                         <span class="input2"></span><br>
+                         <span class="input3"></span>
+                     </div>
+                     <div class="btn-group">
+                        <a href="#" class="btn active">Contact Me (Admin)</a>
+                     </div>
 
-                      <div class="btn-group">
-                         <a href="#" class="btn active">Contact Me (Admin)</a>
-                      </div>
-
-                      <div class="social">
-                          <a href="https://www.linkedin.com/in/dimas-dwi-rachmat-susilo-baa30923b/"><i class="fa-brands fa-linkedin"></i></a>
-                          <a href="https://www.instagram.com/drsdimas_/"><i class="fa-brands fa-instagram"></i></a>
-                          <a href="https://www.tiktok.com/@drsdimas_"><i class="fa-brands fa-tiktok"></i></a>
-                          <a href="https://github.com/DRSDimas"><i class="fa-brands fa-github"></i></a>
-                      </div>
-                  </div>
+                     <div class="social">
+                         <a href="https://www.linkedin.com/in/dimas-dwi-rachmat-susilo-baa30923b/"><i class="fa-brands fa-linkedin"></i></a>
+                         <a href="https://www.instagram.com/drsdimas_/"><i class="fa-brands fa-instagram"></i></a>
+                         <a href="https://www.tiktok.com/@drsdimas_"><i class="fa-brands fa-tiktok"></i></a>
+                         <a href="https://github.com/DRSDimas"><i class="fa-brands fa-github"></i></a>
+                     </div>
+                 </div>
              </div>
          </div>
        </div>
@@ -64,12 +70,32 @@
              nav.classList.toggle("open");
          })
 
-         var typed=new Typed(".input",{
-             strings:["Remote Sensing Analyst","WebGIS Developer","OSINT Enthusiast"],
-             typedSpeed:70,
-             backSpeed:55,
-             loop:true
-         })
+         // MODIFICATION START: Created separate options for each line with different strings
+         var options1 = {
+             strings: ["Courageous", "Glorious", "Furious", "Audacious"],
+             typeSpeed: 70,
+             backSpeed: 55,
+             loop: true
+         };
+
+         var options2 = {
+             strings: ["Indomitable", "Implacable", "Indefatigable", "Formidable" ],
+             typeSpeed: 70,
+             backSpeed: 55,
+             loop: true
+         };
+
+         var options3 = {
+             strings: ["Vanguard", "Vigilant", "Vengeance", "Victorious"],
+             typeSpeed: 70,
+             backSpeed: 55,
+             loop: true
+         };
+
+         new Typed(".input1", options1);
+         new Typed(".input2", options2);
+         new Typed(".input3", options3);
+         // MODIFICATION END
      </script>
 </body>
 </html>
