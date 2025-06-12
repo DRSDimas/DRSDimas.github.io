@@ -1,13 +1,14 @@
+/* CORRECTED: Using the standard 'fonts' path and correct font weights */
 @font-face {
   font-family: 'Marianne';
-  src: url('fontes web/Marianne-Light.woff2') format('woff2'); 
-  font-weight: 300;
+  src: url('fonts/Marianne-Light.woff2') format('woff2'); 
+  font-weight: 300; /* This is correct for Light */
   font-style: normal;
 }
 @font-face {
   font-family: 'Marianne';
-  src: url('fontes web/Marianne-ExtraBold.woff2') format('woff2');
-  font-weight: 700;
+  src: url('fonts/Marianne-Bold.woff2') format('woff2');
+  font-weight: 700; /* CORRECTED: 'Bold' corresponds to weight 700 */
   font-style: normal;
 }
 
@@ -19,6 +20,7 @@
 }
 body{
     overflow-x: hidden;
+    /* This rule correctly applies Marianne Light (weight 300) to the entire page */
     font-family: 'Marianne', sans-serif;
     font-weight: 300;
 }
@@ -89,6 +91,7 @@ nav .navlinks li{
 nav .navlinks li a{
      color:#ffffff;
      margin-right: 2.5rem;
+     /* This text will now correctly inherit Marianne Light from the body */
 }
 .container {
     display: flex;
@@ -120,18 +123,18 @@ nav .navlinks li a{
 
 .hero-text h5 {
     color: #16d387;
-    font-size: 1.2 rem;
+    font-size: 1.2rem;
     margin-bottom: 0rem;
-    line-height: 0;
+    line-height: 1.2; 
 }
 
 .hero-text .typed-lines {
     color: #ffffff;
     font-size: 1.2rem;
     line-height: 1.6;
-    margin: 0px 0 0px;
+    margin: 8px 0 20px; 
     font-family: 'Spectral', serif;
-    font-weight: 100;
+    font-weight: 700;
     font-style: italic;
 }
 
@@ -139,7 +142,7 @@ nav .navlinks li a{
     color: #ffffff;
     font-size: 3rem;
     font-family: 'Marianne', sans-serif;
-    font-weight: 700;
+    font-weight: 700; /* CORRECTED: This now matches the 'Bold' font file */
     margin: 0;
 }
 
@@ -156,6 +159,7 @@ nav .navlinks li a{
     border-radius: 30px;
     border:2px solid #e5e5e5;
     box-shadow:  0 10px 10px -8px rgb(0 0 0 / 78%);
+    /* This text will now correctly inherit Marianne Light from the body */
 }
 .btn.active{
     border-color:#16d387;
@@ -171,68 +175,20 @@ nav .navlinks li a{
     color:#16d387;
     transform: rotate(360deg);
 }
-/* Media queries... */
-@media(max-width:930px)
-{
-    nav .togglebtn{
-        display: initial;
-    }
-    .click {
-        top:45px;
-    }
-    .click span{
-        position: absolute;
-        margin-top:12px
-    }
-    .click span:first-child{
-        transform: rotate(-40deg);
-    }
-    .click span:nth-child(2)
-    {
-        opacity: 0;
-        margin:0;
-    }
-    .click span:last-child{
-        transform: rotate(45deg);
-        top:0;
-    }
-    nav .navlinks{
-        position: absolute;
-        top:110px;
-        right:-100%;
-        bottom: 0;
-        width: 60%;
-        height: 100vh;
-        background-color: #222;
-        z-index: 3;
-        box-shadow: 5px 13px 30px rgba(0,0,0,0.1);
-        transition: 0.5s;
-        padding: 25px 0px;
-    }
-    nav .navlinks li{
-        display: block;
-    }
-    nav .navlinks li a{
-        display: block;
-        margin-bottom: 15px;
-        text-align: center;
-    }
-    nav .navlinks.open{
-        right:0;
-    }
+@media(max-width:930px){
+    nav .togglebtn{display: initial;}
+    .click {top:45px;}
+    .click span{position: absolute; margin-top:12px}
+    .click span:first-child{transform: rotate(-40deg);}
+    .click span:nth-child(2){opacity: 0; margin:0;}
+    .click span:last-child{transform: rotate(45deg); top:0;}
+    nav .navlinks{position: absolute; top:110px; right:-100%; bottom: 0; width: 60%; height: 100vh; background-color: #222; z-index: 3; box-shadow: 5px 13px 30px rgba(0,0,0,0.1); transition: 0.5s; padding: 25px 0px;}
+    nav .navlinks li{display: block;}
+    nav .navlinks li a{display: block; margin-bottom: 15px; text-align: center;}
+    nav .navlinks.open{right:0;}
 }
-@media(max-width:768px)
-{
-    .container{
-        flex-direction: column;
-        padding-top:2rem
-    }
-    .hero-text{
-        padding:40px 0px;
-    }
-    .container .hero-pic {
-        width: 200px;
-        height: 200px;
-        border-width: 5px;
-    }
+@media(max-width:768px){
+    .container{flex-direction: column; padding-top:2rem}
+    .hero-text{padding:40px 0px;}
+    .container .hero-pic {width: 200px; height: 200px; border-width: 5px;}
 }
