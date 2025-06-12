@@ -1,12 +1,28 @@
+/* MODIFICATION START: Define the locally hosted Marianne font */
+@font-face {
+  font-family: 'Marianne';
+  src: url('fonts/Marianne-Light.woff2') format('woff2');
+  font-weight: 300; /* This corresponds to Light */
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Marianne';
+  src: url('fonts/Marianne-ExtraBold.woff2') format('woff2');
+  font-weight: 800; /* This corresponds to ExtraBold */
+  font-style: normal;
+}
+/* MODIFICATION END */
+
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: poppins,sans-serif;
     text-decoration: none;
 }
 body{
     overflow-x: hidden;
+    font-family: 'Marianne', sans-serif;
+    font-weight: 300; /* Use Marianne Light by default */
 }
 #bg-video {
     position: fixed;
@@ -103,21 +119,35 @@ nav .navlinks li a{
     display: flex;
     flex-direction: column;
 }
-.hero-text h5{
-    color:#ffffff;
-    font-size: 14px;
-}
-.hero-text h5 span{
-    color:#16d387;
-    font-size: 16px;
-}
-.hero-text h1{
+
+.hero-text h5 {
     color: #16d387;
-    font-size: 3rem;
+    font-size: 1.5rem;
+    margin-bottom: 0rem;
+    /* MODIFICATION: Adjust line-height to tighten spacing */
+    line-height: 1;
 }
-.hero-text p{
-    color:#ffffff;
+
+.hero-text .typed-lines {
+    color: #ffffff;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    /* MODIFICATION: Reduced top margin from 10px to 8px */
+    margin: 1px 0 20px;
+    font-family: 'Spectral', serif;
+    font-weight: 100;
+    font-style: italic;
 }
+
+.hero-text h1{
+    color: #ffffff;
+    font-size: 4rem;
+    font-family: 'Marianne', sans-serif;
+    font-weight: 700;
+    /* MODIFICATION: Remove default browser margins */
+    margin: 0;
+}
+
 .btn-group{
     margin:45px 0;
 }
@@ -145,7 +175,7 @@ nav .navlinks li a{
     color:#16d387;
     transform: rotate(360deg);
 }
-/* Respnosiv design & displaying navbar for small screen */
+/* Responsive design & displaying navbar for small screen */
 @media(max-width:930px)
 {
     nav .togglebtn{
